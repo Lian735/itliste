@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Test</title>
+    <title>IT Liste</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,13 +20,13 @@
     </style>
 </head>
 <body>
-    <h1>Kuhle Bilder</h1>
+    <h1>richtig kuhle Bilder:</h1>
     <div id="gallery" class="image-list"></div>
 
     <script>
         // Hier den Benutzernamen und Repository-Namen anpassen
-        const username = "DeinGitHubBenutzername";
-        const repoName = "DeinRepositoryName";
+        const username = "Lian735";
+        const repoName = "itliste";
         const folderPath = "images";
 
         async function fetchImages() {
@@ -37,7 +37,7 @@
             const gallery = document.getElementById("gallery");
 
             files.forEach(file => {
-                if (file.type === "file" && (file.name.endsWith(".jpg") || file.name.endsWith(".png"))) {
+                if (file.type === "file" && (file.name.endsWith(".jpg") || file.name.endsWith(".jpeg") || file.name.endsWith(".png"))) {
                     const img = document.createElement("img");
                     img.src = file.download_url;
                     img.alt = file.name;
